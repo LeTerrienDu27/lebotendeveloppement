@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 
-var PREFIX = "!";
+var PREFIX = "*";
 
 var bot = new Discord.Client();
 
 bot.on("ready", function() {
-    bot.user.setGame("TutoBot, !help");
+    bot.user.setGame("être developper par LeTerrienDu27.");
     console.log("Le bot a bien ete connecte");
 });
 
@@ -25,7 +25,7 @@ bot.on("message", async function(message) {
                 title: '',
                 fields: [{
                     name: "Lien d'invitation discord",
-                    value: "https://discord.gg/CsH3kj",
+                    value: "LE LIENS ICI",
                     inline: false
                 }],
                 footer: {
