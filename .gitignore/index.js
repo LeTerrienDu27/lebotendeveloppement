@@ -7,10 +7,6 @@ var bot = new Discord.Client();
 bot.on("ready", function() {
     bot.user.setGame("être developper par LeTerrienDu27.");
     console.log("Le bot a bien ete connecte");
-    
-    bot.off("ready", function() {
-    bot.user.setGame("Hors ligne");
-    console.log("Le bot a bien été déconnecté.");
 });
 
 bot.on("message", async function(message) {
