@@ -5,7 +5,7 @@ var PREFIX = "*";
 var bot = new Discord.Client();
 
 bot.on("ready", function() {
-    bot.user.setGame("être developper par LeTerrienDu27.");
+    bot.user.setGame("attendre le retour de mon développeur.");
     console.log("Le bot a bien ete connecte");
 });
 
