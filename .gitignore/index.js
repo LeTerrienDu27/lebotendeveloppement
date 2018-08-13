@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
 
-var PREFIX = ",";
+var PREFIX = "!";
 
 var bot = new Discord.Client();
 
 bot.on("ready", function() {
-    bot.user.setGame("Le bot est en développement");
-    console.log("Lebot a bien été connecté");
+    bot.user.setGame("TutoBot, !help");
+    console.log("Le bot a bien ete connecte");
 });
 
 bot.on("message", async function(message) {
@@ -14,11 +14,10 @@ bot.on("message", async function(message) {
 
     if(!message.content.startsWith(PREFIX)) return;
 
-    var args = message.content.substring(PREFIX.length).split(" ")
+    var args = message.content.substring(PREFIX.length).split(" ");
 
     switch(args[0].toLowerCase()) {
         case "invite":
-        message.channel.send("Test");
         message.channel.send("", {
             embed: {
                 color: 0xFF0000,
@@ -26,7 +25,7 @@ bot.on("message", async function(message) {
                 title: '',
                 fields: [{
                     name: "Lien d'invitation discord",
-                    value: "https://discord.gg/MqKvhvB",
+                    value: "https://discord.gg/CsH3kj",
                     inline: false
                 }],
                 footer: {
@@ -37,4 +36,5 @@ bot.on("message", async function(message) {
         break;
     }
 });
- bot.login(process.env.TOKEN);
+
+bot.login(process.env.TOKEN);
