@@ -37,4 +37,4 @@ bot.on("message", async function(message) {
     }
 });
 
-bot.login(process.env."NDc4NjU1MDQyMTc4NjQ2MDE3.DlOmcA.VXhrTclckj3dlu8Ot85KP5OtHmw");
+bot.login(process.env.TOKEN);
