@@ -31,8 +31,8 @@ bot.on("message", async function(message) {
                 footer: {
                     footer: "Partager ce lien à tous vos amis !",
                 
-                if (message.content.toLowerCase().startsWith(PREFIX + "help")) {
-                    message.reply("Ton aide a été envoyée en messgae privée")
+if (message.content.toLowerCase().startsWith(PREFIX + "help")) {
+    message.reply("Ton aide a été envoyée en messgae privée")
                     
                 }
 
