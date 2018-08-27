@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 
-var PREFIX = "*";
+var PREFIX = "!";
 
 var bot = new Discord.Client();
 
 bot.on("ready", function() {
-    bot.user.setGame("attendre le retour de mon développeur.");
+    bot.user.setGame("TutoBot, !help");
     console.log("Le bot a bien ete connecte");
 });
 
@@ -25,11 +25,17 @@ bot.on("message", async function(message) {
                 title: '',
                 fields: [{
                     name: "Lien d'invitation discord",
-                    value: "LE LIENS ICI",
+                    value: "https://discord.gg/CsH3kj",
                     inline: false
                 }],
                 footer: {
                     footer: "Partager ce lien à tous vos amis !",
+                
+                if (message.content.toLowerCase().startsWith(PREFIX + "help")) {
+                    message.reply("Ton aide a été envoyée en messgae privée")
+                    
+                }
+
                 },
             }
         });
